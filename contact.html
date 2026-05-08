@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact · Nitesh Chawda Consulting</title>
+<meta name="description" content="Start a conversation with Nitesh Chawda Consulting. Most briefs are answered within two business days.">
+<meta name="theme-color" content="#051C2C">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://niteshchawda.consulting/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+<div class="marquee">
+  <div class="container">
+    <span>NCC Quarterly · Vol I · May 2026</span>
+    <span class="marquee-divider">·</span>
+    <a href="/insights.html">Read the latest →</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a class="brandmark" href="/">N<span class="dot">.</span>C<br><span>Nitesh Chawda Consulting</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="primary-nav" id="primary-nav">
+      <a href="/services.html">What we do</a>
+      <a href="/engagements.html">Engagements</a>
+      <a href="/insights.html">Insights</a>
+      <a href="/about.html">About</a>
+      <a class="cta-link" href="/contact.html" aria-current="page">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Contact</span>
+    <h1 class="text-balance">Start a conversation.</h1>
+    <p class="lead">The fastest way to engage the practice is a short note describing the situation and the decision in front of you. Most briefs are answered within two business days.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="eyebrow">Direct details</span>
+        <h2>Reach the practice.</h2>
+        <p><strong>Email</strong><br><a href="mailto:contact@niteshchawda.consulting">contact@niteshchawda.consulting</a></p>
+        <p><strong>Office</strong><br>Nitesh Chawda Consulting Pty Ltd<br>9 Victoria Street, Box Hill<br>Victoria 3128, Australia<br><span class="muted small">Office visits by appointment.</span></p>
+        <p><strong>Connect</strong><br><a href="https://www.linkedin.com" rel="noopener">LinkedIn</a> · <a href="https://substack.com" rel="noopener">Substack</a></p>
+
+        <hr class="rule">
+
+        <span class="eyebrow">Working privately</span>
+        <h3 style="font-family: var(--serif)">Confidentiality from first contact.</h3>
+        <p>The practice routinely works under bespoke NDA before any commercial conversation. If you require a signed NDA prior to first contact, write to <a href="mailto:contact@niteshchawda.consulting">contact@niteshchawda.consulting</a> and one will be issued within one business day.</p>
+      </div>
+
+      <div>
+        <span class="eyebrow">Send a brief</span>
+        <h2>What's in front of you?</h2>
+        <form class="form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ENDPOINT" method="POST" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="org">Organisation</label>
+              <input id="org" name="organisation" type="text" required autocomplete="organization">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="role">Role</label>
+              <input id="role" name="role" type="text" autocomplete="organization-title">
+            </div>
+            <div class="field">
+              <label for="country">Country</label>
+              <select id="country" name="country" required>
+                <option value="" disabled selected>Select a country</option>
+                <option>Australia</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+                <option>New Zealand</option>
+                <option>Singapore</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="nature">Nature of the brief</label>
+            <select id="nature" name="nature" required>
+              <option value="" disabled selected>Select a category</option>
+              <option>Strategy</option>
+              <option>AI &amp; Automation</option>
+              <option>Post-Merger Integration</option>
+              <option>Private Equity / Diligence</option>
+              <option>Energy / Future Grid</option>
+              <option>Board / NED</option>
+              <option>Quantitative / Quantum</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="brief">Brief (≤ 1,500 characters)</label>
+            <textarea id="brief" name="brief" maxlength="1500" required placeholder="Describe the situation and the decision in front of you. Plain English is fine."></textarea>
+          </div>
+          <div class="field">
+            <label for="source">How did you hear about the practice?</label>
+            <input id="source" name="source" type="text">
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" name="consent" required>
+            <span>I have read the <a href="/privacy.html">privacy notice</a> and consent to NCC processing this enquiry to respond to it.</span>
+          </label>
+          <button class="btn-submit" type="submit">Send brief</button>
+          <p class="small muted">By submitting you agree the practice may store your enquiry in encrypted form for the time required to respond. The practice does not add submitters to a marketing list.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Nitesh Chawda<span class="dot">.</span><br>Consulting</div>
+        <p style="margin-top: 1rem">Strategy at the intersection of capital, AI, and operations.</p>
+      </div>
+      <div>
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="/services.html">What we do</a></li>
+          <li><a href="/engagements.html">Engagements</a></li>
+          <li><a href="/insights.html">Insights</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Office</h4>
+        <ul>
+          <li>Nitesh Chawda Consulting Pty Ltd</li>
+          <li>9 Victoria Street, Box Hill</li>
+          <li>Victoria 3128, Australia</li>
+          <li><a href="mailto:contact@niteshchawda.consulting">contact@niteshchawda.consulting</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© Nitesh Chawda Consulting Pty Ltd 2026 · ABN [pending] · ACN [pending]</div>
+      <div><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="https://www.linkedin.com" rel="noopener">LinkedIn</a></div>
+    </div>
+  </div>
+</footer>
+<script src="/assets/main.js" defer></script>
+</body>
+</html>
