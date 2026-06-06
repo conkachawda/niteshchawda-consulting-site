@@ -19,20 +19,23 @@
     var detail = wrap.querySelector("[data-cube-detail]");
     var nav = wrap.querySelector("[data-cube-nav]");
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var isStatic = scene.hasAttribute("data-static");
+    var scrollMap = null;
+    try { scrollMap = JSON.parse(scene.getAttribute("data-scroll-map") || "null"); } catch (e) { scrollMap = null; }
     var rotX = -18, rotY = 24, tX = null, tY = null, hovering = false, dragging = false, px = 0, py = 0, faces = {};
 
     FACES.forEach(function (f, i) {
       var el = document.createElement("div");
       el.className = "cube-face " + f.cls;
       el.innerHTML = '<span class="cf-num">0' + (i + 1) + '</span><span class="cf-label">' + f.label + "</span>";
-      el.addEventListener("click", function (e) { e.stopPropagation(); select(f); });
+      el.addEventListener("click", function (e) { e.stopPropagation(); select(f, true); });
       cube.appendChild(el);
       faces[f.key] = el;
 
       if (nav) {
         var b = document.createElement("button");
         b.type = "button"; b.textContent = f.label;
-        b.addEventListener("click", function () { select(f); });
+        b.addEventListener("click", function () { select(f, true); });
         nav.appendChild(b);
         f._btn = b;
       }
@@ -41,13 +44,17 @@
     function setDetail(f) {
       if (detail) detail.innerHTML = '<span class="eyebrow">Pillar 0' + (FACES.indexOf(f) + 1) + "</span><h3>" + f.label + "</h3><p>" + f.desc + "</p>";
     }
-    function select(f) {
+    function select(f, doScroll) {
       tX = f.rx; tY = f.ry;
       FACES.forEach(function (x) {
         faces[x.key].classList.toggle("is-active", x === f);
         if (x._btn) x._btn.classList.toggle("is-active", x === f);
       });
       setDetail(f);
+      if (doScroll && scrollMap && scrollMap[f.key]) {
+        var tgt = document.getElementById(scrollMap[f.key]);
+        if (tgt) tgt.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
     setDetail(FACES[0]);
 
@@ -55,7 +62,7 @@
       if (tX !== null) {
         rotX += (tX - rotX) * 0.12; rotY += (tY - rotY) * 0.12;
         if (Math.abs(tX - rotX) < 0.2 && Math.abs(tY - rotY) < 0.2) { rotX = tX; rotY = tY; tX = tY = null; }
-      } else if (!hovering && !dragging && !reduce) {
+      } else if (!isStatic && !hovering && !dragging && !reduce) {
         rotY += 0.16;
       }
       cube.style.transform = "rotateX(" + rotX + "deg) rotateY(" + rotY + "deg)";

@@ -56,17 +56,29 @@
   </div>
 </section>
 
-<section class="section section--bone">
+<!-- THE MODEL — interactive cube navigator -->
+<section class="section section--ink" id="model">
+  <div class="container container--narrow" style="text-align: center">
+    <span class="eyebrow" style="--eyebrow-center: 1">The model</span>
+    <h2 class="text-balance reveal">Six focus areas. Six faces of one model.</h2>
+    <p class="lead reveal" style="margin-inline: auto">Turn it — or click a face to jump straight to that area. They&#39;re separate service lines, but they&#39;re sides of one object, joined together when the situation demands it.</p>
+  </div>
   <div class="container">
-    <nav class="toc" aria-label="On this page">
-      <h4>On this page</h4>
+    <div class="cube-block reveal">
+      <div class="cube-scene" data-cube data-scroll-map='{"strategy":"strategy","operations":"opmodel","ai":"ai","capital":"pe","quantum":"quant"}'><div class="cube"></div></div>
+      <div class="cube-side">
+        <div class="cube-detail" data-cube-detail></div>
+        <div class="cube-nav" data-cube-nav></div>
+      </div>
+    </div>
+    <nav class="visually-hidden" aria-label="On this page">
       <ol>
-        <li><a href="#strategy">01 · Strategic Counsel &amp; Board Advisory</a></li>
-        <li><a href="#opmodel">02 · Operating Model Design &amp; Transformation</a></li>
-        <li><a href="#ai">03 · AI &amp; Agentic Operating Models</a></li>
-        <li><a href="#automation">04 · Automation &amp; Workflow Engineering</a></li>
-        <li><a href="#quant">05 · Quantum &amp; Optimisation Sciences</a></li>
-        <li><a href="#pe">06 · Private Equity, M&amp;A and PMI</a></li>
+        <li><a href="#strategy">Strategic Counsel &amp; Board Advisory</a></li>
+        <li><a href="#opmodel">Operating Model Design &amp; Transformation</a></li>
+        <li><a href="#ai">AI &amp; Agentic Operating Models</a></li>
+        <li><a href="#automation">Automation &amp; Workflow Engineering</a></li>
+        <li><a href="#quant">Quantum &amp; Optimisation Sciences</a></li>
+        <li><a href="#pe">Private Equity, M&amp;A and PMI</a></li>
       </ol>
     </nav>
   </div>
@@ -258,6 +270,7 @@
     </div>
   </div>
 </footer>
+<script src="assets/cube.js" defer></script>
 <script src="assets/main.js" defer></script>
 </body>
 </html>

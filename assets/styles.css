@@ -951,11 +951,11 @@ canvas.ncc-matrix { position: absolute; inset: 0; width: 100%; height: 100%; dis
 
 /* --- The model: interactive 3D cube --------------------------- */
 .cube-block { display: grid; grid-template-columns: 280px 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; margin-top: 3.5rem; }
-.cube-scene { perspective: 1100px; width: 260px; height: 260px; margin: 0 auto; cursor: grab; touch-action: none; }
+.cube-scene { --cube-size: 260px; perspective: 1100px; width: var(--cube-size); height: var(--cube-size); margin: 0 auto; cursor: grab; touch-action: none; }
 .cube-scene:active { cursor: grabbing; }
-.cube { position: relative; width: 260px; height: 260px; transform-style: preserve-3d; will-change: transform; }
+.cube { position: relative; width: var(--cube-size); height: var(--cube-size); transform-style: preserve-3d; will-change: transform; }
 .cube-face {
-  position: absolute; left: 0; top: 0; width: 260px; height: 260px;
+  position: absolute; left: 0; top: 0; width: var(--cube-size); height: var(--cube-size);
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem;
   border: 1px solid rgba(201, 168, 106, 0.42);
   background: rgba(8, 10, 14, 0.5);
@@ -963,14 +963,14 @@ canvas.ncc-matrix { position: absolute; inset: 0; width: 100%; height: 100%; dis
   transition: background .3s ease, border-color .3s ease;
 }
 .cube-face .cf-num { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.2em; color: var(--brass); }
-.cube-face .cf-label { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: var(--bone); text-align: center; padding: 0 1rem; line-height: 1.1; }
+.cube-face .cf-label { font-family: var(--serif); font-size: clamp(1rem, calc(var(--cube-size) * 0.062), 1.6rem); font-weight: 600; color: var(--bone); text-align: center; padding: 0 0.85rem; line-height: 1.1; }
 .cube-face.is-active { background: rgba(201, 168, 106, 0.18); border-color: var(--brass); }
-.cf-front  { transform: translateZ(130px); }
-.cf-back   { transform: rotateY(180deg) translateZ(130px); }
-.cf-right  { transform: rotateY(90deg) translateZ(130px); }
-.cf-left   { transform: rotateY(-90deg) translateZ(130px); }
-.cf-top    { transform: rotateX(90deg) translateZ(130px); }
-.cf-bottom { transform: rotateX(-90deg) translateZ(130px); }
+.cf-front  { transform: translateZ(calc(var(--cube-size) / 2)); }
+.cf-back   { transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2)); }
+.cf-right  { transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2)); }
+.cf-left   { transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2)); }
+.cf-top    { transform: rotateX(90deg) translateZ(calc(var(--cube-size) / 2)); }
+.cf-bottom { transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2)); }
 .cube-detail .eyebrow { margin-bottom: 0.75rem; }
 .cube-detail h3 { color: var(--bone); font-size: clamp(1.6rem, 2.2vw, 2.1rem); margin-bottom: 0.6rem; }
 .cube-detail p { color: rgba(250, 248, 243, 0.75); max-width: 46ch; }
@@ -991,10 +991,23 @@ canvas.ncc-matrix { position: absolute; inset: 0; width: 100%; height: 100%; dis
   font-family: var(--serif); font-size: 0.9375rem; text-decoration: none; transition: background .25s ease;
 }
 .cube-engine:hover { background: rgba(201, 168, 106, 0.12); color: var(--bone); }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Compact per-tab cube — a recurring motif, locked to this page's face */
+.cube-scene--sm { --cube-size: 168px; perspective: 760px; }
+.cube-tab { display: grid; grid-template-columns: 200px 1fr; gap: clamp(1.75rem, 4vw, 3.25rem); align-items: center; }
+.cube-tab .cube-scene { margin: 0 auto; }
+.cube-tab .eyebrow { margin-bottom: 0.75rem; }
+.cube-tab-title { color: var(--bone); font-size: clamp(1.4rem, 2vw, 1.95rem); margin-bottom: 0.6rem; }
+.cube-tab p { color: rgba(250, 248, 243, 0.75); max-width: 54ch; }
+.cube-tab p a { color: var(--brass); text-decoration: none; border-bottom: 1px solid rgba(201, 168, 106, 0.4); }
+.cube-tab p a:hover { color: var(--brass-bright); }
 @media (max-width: 760px) {
   .cube-block { grid-template-columns: 1fr; gap: 2rem; }
   .cube-detail { text-align: center; }
   .cube-nav { justify-content: center; }
+  .cube-tab { grid-template-columns: 1fr; text-align: center; gap: 1.75rem; }
 }
 
 /* --- Footer --------------------------------------------------- */
