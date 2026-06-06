@@ -76,6 +76,7 @@
     }
 
     function frame() {
+      if (!W || !H) { raf = requestAnimationFrame(frame); return; }
       t += 0.006;
       ctx.clearRect(0, 0, W, H);
 
@@ -165,8 +166,9 @@
       });
     });
 
+    if (window.ResizeObserver) { new ResizeObserver(function () { resize(); }).observe(stage); }
     window.addEventListener("resize", resize);
-    resize();
+    requestAnimationFrame(resize);
     frame();
   }
 
