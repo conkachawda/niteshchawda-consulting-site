@@ -828,6 +828,21 @@ section.hero .cta-link.cta-link--brass {
 .eyebrow[style*="--eyebrow-center"] { display: block; }
 .eyebrow[style*="--eyebrow-center"]::before { display: none; }
 
+/* --- Executive Support division: warm clay/blush accent ---------
+   Scoped to the page CONTENT only (.exec-support main), so the NCC
+   header brandmark + footer stay the standard champagne-gold for
+   cross-site consistency. Shifts the in-page accent from gold to a
+   sophisticated clay-rose — sister-division warmth, not pink-VA. */
+.exec-support main {
+  --brass: #C49A8C;
+  --brass-bright: #E2C4B8;
+  --aged-brass: #905E4F;
+  --glow: 0 0 24px rgba(196, 154, 140, 0.30);
+}
+.exec-support main ::selection { background: #C49A8C; color: var(--ink); }
+/* A touch softer/rounder on the warm page */
+.exec-support main .stat-block { border-radius: 14px; }
+
 /* --- Footer --------------------------------------------------- */
 .site-footer {
   background: var(--ink);
