@@ -923,6 +923,32 @@ section.hero .cta-link.cta-link--brass {
 .team-quote::before { content: "\201C"; color: var(--aged-brass); }
 .team-quote::after { content: "\201D"; color: var(--aged-brass); }
 
+/* --- Interactive framework matrix ------------------------------ */
+.matrix-stage { position: relative; height: clamp(440px, 58vh, 640px); margin-top: 2.5rem; }
+canvas.ncc-matrix { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: crosshair; }
+.matrix-tooltip {
+  position: absolute; pointer-events: none; z-index: 3;
+  background: rgba(5, 6, 8, 0.94);
+  border: 1px solid rgba(201, 168, 106, 0.45);
+  border-radius: 8px; padding: 0.6rem 0.8rem; max-width: 240px;
+  color: rgba(250, 248, 243, 0.85); font-size: 0.8125rem; line-height: 1.45;
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.7);
+}
+.matrix-tooltip strong { display: block; color: var(--brass); font-family: var(--serif); font-size: 0.9375rem; margin-bottom: 0.25rem; }
+.matrix-toggle {
+  display: inline-flex; gap: 0; margin-top: 1.75rem;
+  border: 1px solid rgba(201, 168, 106, 0.35); border-radius: 999px; padding: 3px;
+}
+.matrix-toggle button {
+  background: transparent; border: 0; color: rgba(250, 248, 243, 0.65);
+  font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.5rem 1.1rem; border-radius: 999px; cursor: pointer;
+  transition: background .25s var(--t-ease), color .25s var(--t-ease);
+}
+.matrix-toggle button:hover { color: rgba(250, 248, 243, 0.95); }
+.matrix-toggle button.is-active { background: var(--brass); color: var(--ink); }
+.matrix-hint { text-align: center; margin-top: 1.25rem; color: rgba(250, 248, 243, 0.45); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em; }
+
 /* --- Footer --------------------------------------------------- */
 .site-footer {
   background: var(--ink);
