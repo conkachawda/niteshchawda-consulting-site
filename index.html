@@ -120,15 +120,27 @@
   </div>
 </section>
 
-<!-- HOW IT SCALES -->
-<section class="section">
-  <div class="container container--narrow">
+<!-- THE MODEL — interactive 3D cube -->
+<section class="section section--ink">
+  <div class="container container--narrow" style="text-align: center">
     <span class="eyebrow">How it scales</span>
-    <h2 class="text-balance reveal">The model is the strategy. People and agents are how it scales.</h2>
-    <p class="lead reveal">A framework only compounds if it can be delivered — again, and again, without dropping quality. NCC scales delivery through two engines that reinforce each other.</p>
-    <div class="grid grid--2 reveal-stagger" style="margin-top: 3rem">
-      <div class="pillar"><div class="pillar-title"><span class="index">01</span><span>Human support</span></div><p style="color: var(--slate)">Vetted, trained, managed executive assistants and operators who carry the work — judgement, discretion, and the relationships an algorithm can&#39;t hold. <a href="admin.html">Executive Support →</a></p></div>
-      <div class="pillar"><div class="pillar-title"><span class="index">02</span><span>Agentic support</span></div><p style="color: var(--slate)">AI agents, automations and workflows we design and build — taking the repeatable load off people, so the human hours go where judgement actually matters. <a href="services.html">AI &amp; Automation →</a></p></div>
+    <h2 class="text-balance reveal">One model. Six faces. Two engines.</h2>
+    <p class="lead reveal" style="margin-inline: auto">The pillars aren&#39;t a list — they&#39;re sides of one object. Turn it, click a face, and see what each one holds up. Underneath sit the two engines that scale the whole thing: people, and the agents we build around them.</p>
+  </div>
+  <div class="container">
+    <div class="cube-block reveal">
+      <div class="cube-scene" data-cube><div class="cube"></div></div>
+      <div class="cube-side">
+        <div class="cube-detail" data-cube-detail></div>
+        <div class="cube-nav" data-cube-nav></div>
+      </div>
+    </div>
+    <div class="cube-base reveal">
+      <span class="cube-base-label">The model rests on two engines</span>
+      <span class="cube-engines">
+        <a class="cube-engine" href="admin.html">Human support</a>
+        <a class="cube-engine" href="services.html">Agentic support</a>
+      </span>
     </div>
   </div>
 </section>
@@ -458,6 +470,7 @@
 </footer>
 
 <script src="assets/framework.js" defer></script>
+<script src="assets/cube.js" defer></script>
 <script src="assets/main.js" defer></script>
 </body>
 </html>

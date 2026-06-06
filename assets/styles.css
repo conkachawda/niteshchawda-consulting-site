@@ -949,6 +949,54 @@ canvas.ncc-matrix { position: absolute; inset: 0; width: 100%; height: 100%; dis
 .matrix-toggle button.is-active { background: var(--brass); color: var(--ink); }
 .matrix-hint { text-align: center; margin-top: 1.25rem; color: rgba(250, 248, 243, 0.45); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em; }
 
+/* --- The model: interactive 3D cube --------------------------- */
+.cube-block { display: grid; grid-template-columns: 280px 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; margin-top: 3.5rem; }
+.cube-scene { perspective: 1100px; width: 260px; height: 260px; margin: 0 auto; cursor: grab; touch-action: none; }
+.cube-scene:active { cursor: grabbing; }
+.cube { position: relative; width: 260px; height: 260px; transform-style: preserve-3d; will-change: transform; }
+.cube-face {
+  position: absolute; left: 0; top: 0; width: 260px; height: 260px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem;
+  border: 1px solid rgba(201, 168, 106, 0.42);
+  background: rgba(8, 10, 14, 0.5);
+  box-shadow: inset 0 0 50px rgba(201, 168, 106, 0.05);
+  transition: background .3s ease, border-color .3s ease;
+}
+.cube-face .cf-num { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.2em; color: var(--brass); }
+.cube-face .cf-label { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: var(--bone); text-align: center; padding: 0 1rem; line-height: 1.1; }
+.cube-face.is-active { background: rgba(201, 168, 106, 0.18); border-color: var(--brass); }
+.cf-front  { transform: translateZ(130px); }
+.cf-back   { transform: rotateY(180deg) translateZ(130px); }
+.cf-right  { transform: rotateY(90deg) translateZ(130px); }
+.cf-left   { transform: rotateY(-90deg) translateZ(130px); }
+.cf-top    { transform: rotateX(90deg) translateZ(130px); }
+.cf-bottom { transform: rotateX(-90deg) translateZ(130px); }
+.cube-detail .eyebrow { margin-bottom: 0.75rem; }
+.cube-detail h3 { color: var(--bone); font-size: clamp(1.6rem, 2.2vw, 2.1rem); margin-bottom: 0.6rem; }
+.cube-detail p { color: rgba(250, 248, 243, 0.75); max-width: 46ch; }
+.cube-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.75rem; }
+.cube-nav button {
+  background: transparent; border: 1px solid rgba(201, 168, 106, 0.3); color: rgba(250, 248, 243, 0.65);
+  font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.4rem 0.85rem; border-radius: 999px; cursor: pointer; transition: all .25s ease;
+}
+.cube-nav button:hover { color: var(--bone); border-color: rgba(201, 168, 106, 0.6); }
+.cube-nav button.is-active { background: var(--brass); color: var(--ink); border-color: var(--brass); }
+.cube-base { text-align: center; margin-top: 3rem; }
+.cube-base .cube-base-label { display: block; font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(250, 248, 243, 0.45); margin-bottom: 0.85rem; }
+.cube-engines { display: inline-flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+.cube-engine {
+  border: 1px solid rgba(201, 168, 106, 0.35); border-top: 2px solid var(--brass);
+  border-radius: 8px; padding: 0.7rem 1.3rem; color: var(--bone);
+  font-family: var(--serif); font-size: 0.9375rem; text-decoration: none; transition: background .25s ease;
+}
+.cube-engine:hover { background: rgba(201, 168, 106, 0.12); color: var(--bone); }
+@media (max-width: 760px) {
+  .cube-block { grid-template-columns: 1fr; gap: 2rem; }
+  .cube-detail { text-align: center; }
+  .cube-nav { justify-content: center; }
+}
+
 /* --- Footer --------------------------------------------------- */
 .site-footer {
   background: var(--ink);
