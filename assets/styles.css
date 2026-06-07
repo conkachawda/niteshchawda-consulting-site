@@ -832,14 +832,14 @@ section.hero .cta-link.cta-link--brass {
    Scoped to the page CONTENT only (.exec-support main), so the NCC
    header brandmark + footer stay the standard champagne-gold for
    cross-site consistency. Shifts the in-page accent from gold to a
-   sophisticated clay-rose — sister-division warmth, not pink-VA. */
+   warm taupe-bronze — sister-division warmth, executive, not pink-VA. */
 .exec-support main {
-  --brass: #C49A8C;
-  --brass-bright: #E2C4B8;
-  --aged-brass: #905E4F;
-  --glow: 0 0 24px rgba(196, 154, 140, 0.30);
+  --brass: #C4A988;
+  --brass-bright: #E4D0BC;
+  --aged-brass: #8A6A4F;
+  --glow: 0 0 24px rgba(196, 169, 136, 0.30);
 }
-.exec-support main ::selection { background: #C49A8C; color: var(--ink); }
+.exec-support main ::selection { background: #C4A988; color: var(--ink); }
 /* A touch softer/rounder on the warm page */
 .exec-support main .stat-block { border-radius: 14px; }
 
@@ -887,7 +887,7 @@ section.hero .cta-link.cta-link--brass {
   border-radius: 50%;
   overflow: hidden;
   display: flex; align-items: center; justify-content: center;
-  background: radial-gradient(120% 120% at 30% 20%, rgba(196,154,140,0.45), transparent 60%), linear-gradient(160deg, var(--deep-navy), var(--ink));
+  background: radial-gradient(120% 120% at 30% 20%, rgba(196,169,136,0.45), transparent 60%), linear-gradient(160deg, var(--deep-navy), var(--ink));
   color: var(--brass);
   font-family: var(--serif);
   font-size: 1.4rem; font-weight: 600; letter-spacing: 0.02em;
@@ -1028,9 +1028,9 @@ canvas.ncc-matrix { position: absolute; inset: 0; width: 100%; height: 100%; dis
 .compare thead th { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: rgba(250, 248, 243, 0.55); }
 .compare tbody th { font-weight: 600; color: var(--bone); width: 22%; }
 .compare td.col-them { color: rgba(250, 248, 243, 0.55); width: 39%; }
-.compare td.col-us { color: var(--bone); width: 39%; background: rgba(196, 154, 140, 0.12); border-left: 1px solid rgba(196, 154, 140, 0.45); border-right: 1px solid rgba(196, 154, 140, 0.45); }
-.compare thead th.col-us { color: var(--brass); background: rgba(196, 154, 140, 0.12); border-bottom: 2px solid var(--brass); border-left: 1px solid rgba(196, 154, 140, 0.45); border-right: 1px solid rgba(196, 154, 140, 0.45); }
-.compare tbody tr:last-child td.col-us { border-bottom: 1px solid rgba(196, 154, 140, 0.45); }
+.compare td.col-us { color: var(--bone); width: 39%; background: rgba(196, 169, 136, 0.12); border-left: 1px solid rgba(196, 169, 136, 0.45); border-right: 1px solid rgba(196, 169, 136, 0.45); }
+.compare thead th.col-us { color: var(--brass); background: rgba(196, 169, 136, 0.12); border-bottom: 2px solid var(--brass); border-left: 1px solid rgba(196, 169, 136, 0.45); border-right: 1px solid rgba(196, 169, 136, 0.45); }
+.compare tbody tr:last-child td.col-us { border-bottom: 1px solid rgba(196, 169, 136, 0.45); }
 .compare td.col-us strong { color: var(--brass); }
 
 /* Compact per-tab cube — a recurring motif, locked to this page's face */
