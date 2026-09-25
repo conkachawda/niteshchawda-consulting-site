@@ -8,9 +8,9 @@ Static, responsive website published through GitHub Pages at https://niteshchawd
 - `about.html`: career story and education.
 - `profile.html`: career history, concurrent appointments and print / save-as-PDF.
 - `services.html`: eight-stage personal method, retaining the legacy URL.
-- `engagements.html`: anonymised professional experience.
+- `engagements.html`: named professional experience.
 - `insights.html`: education and academic studies.
-- `quantum-commercialisation.html` and `investment-and-performance.html`: academic cases and anonymised PDF downloads.
+- `quantum-commercialisation.html` and `investment-and-performance.html`: academic cases, original PDF downloads and scrollable readers.
 - `contact.html`: professional contacts and the existing Formspree endpoint.
 - `admin.html`: the former executive-support URL now presents personal leadership and enablement experience.
 - `privacy.html`, `terms.html`, `credits.html`: site context and sources.
@@ -34,8 +34,11 @@ The site is a personal CV and portfolio. Keep first-person career language, expl
 - McKinsey is contracted engagement leadership.
 - Bond is commerce with law studies; Harvard is an ALM; Sussex follows the official programme title with AI/cybersecurity described as personal focus.
 - The age-17 scholarship is the owner's account, separate from the CV's 2011 programme. Deloitte's age-21 start follows the November 2012 date.
-- Cases withhold company names. Academic proposals and modelled benefits must stay distinct from delivered professional outcomes.
-- Do not upload source PDFs or raw CV/transcript extractions. They contain named subjects and identifiers. Public PDFs are purpose-written anonymised adaptations.
+- The owner authorised named client cases and the two original academic papers on 25 September 2026. Academic proposals and modelled benefits remain distinct from delivered professional outcomes.
+- Publish only the two authorised academic papers; keep raw CV/transcript extractions out of the repository.
+- The 20+ countries, 45+ clients and +$350M programme uplift figures are the owner’s updated career-wide account. Avoid adding the component examples together, since programme outcomes may overlap.
+- Reference entries are first-person relationship descriptions, not quotations or endorsements.
+- Generated speaking/workshop scenes must retain visible illustration captions. The welcome MP4 is a motion treatment of a still, not recorded speaking footage.
 - Logos identify relationships, not endorsements. See `assets/ASSET-SOURCES.md`.
 
 ## Validation and publishing
