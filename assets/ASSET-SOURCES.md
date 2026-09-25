@@ -20,14 +20,21 @@ Saved HTML files in this directory are provenance research snapshots, not deploy
 
 ## Additional CV organisation ribbon assets
 
-Five additional unmodified SVGs downloaded and validated as SVG/XML on 25 September 2026. Relationship labels must come from the CV; this asset inventory does not classify organisations as employers or consulting clients.
+Four additional unmodified SVGs downloaded and validated as SVG/XML on 25 September 2026. Relationship labels must come from the CV; this asset inventory does not classify organisations as employers or consulting clients.
 
 | Local file | Entity | Source page | Download URL | Notes |
 |---|---|---|---|---|
-| `kpmg.svg` | KPMG | https://commons.wikimedia.org/wiki/File:KPMG_blue_logo.svg | https://upload.wikimedia.org/wikipedia/commons/d/db/KPMG_blue_logo.svg | Blue wordmark; viewBox 0.05 0.2 80.58 32.08. |
 | `telstra.svg` | Telstra | https://commons.wikimedia.org/wiki/File:Telstra_logo_(horizontal_variant).svg | https://upload.wikimedia.org/wikipedia/commons/4/4e/Telstra_logo_%28horizontal_variant%29.svg | Horizontal wordmark; Wikimedia source attributes original to Telstra. |
 | `bupa.svg` | Bupa | https://www.bupa.com/ | https://www.bupa.com/~/media/images/b/bupa-v5/logo/bupa-logo.svg | Official current square Bupa logo, 93 × 93 viewBox. |
 | `woolworths-group-white.svg` | Woolworths Group Australia | https://www.woolworthsgroup.com.au/ | https://www.woolworthsgroup.com.au/content/dam/wwg/wwg-assets/LogoWhite.svg | Official white-on-transparent horizontal mark, 240 × 65 viewBox. Suitable on navy background. Does not use anniversary lockup. |
 | `isg-white.svg` | Information Services Group (ISG) | https://isg-one.com/ | https://isg-one.com/images/default-source/ResourcePackages/ISG2021/svg/logos/isg-logo_white.svg | Official white mark used in homepage header and footer, linked from official main.min.css. 158.4 × 106.38 viewBox. Suitable on navy background. |
 
 Herbert Smith Freehills historical logo was not downloaded: the requested historical identity was not promptly available from official/Wikimedia sources. The successor HSF Kramer identity should not silently replace the historical firm name in the CV ribbon.
+
+## Personal imagery and original papers
+
+Workshop and university speaking assets were generated using the owner’s supplied identity references on 25 September 2026. Visible captions disclose that they are illustrations. The workshop MP4 is a subtle motion treatment of the generated still, not live footage. Harvard commencement is a genuine owner-supplied photograph, converted to WebP without content changes.
+
+The two academic PDFs under `papers/` are byte-identical copies authorised by their author for publication. WebP page images are renders for the embedded reader.
+
+The map uses public-domain Natural Earth geometry; see `maps/CREDITS.md` for provenance.
