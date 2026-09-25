@@ -11,7 +11,7 @@ Downloaded 25 September 2026. Original SVGs are unmodified. Every SVG parsed suc
 | `macquarie.svg` | Macquarie | https://commons.wikimedia.org/wiki/File:Macquarie_Logo.svg | https://upload.wikimedia.org/wikipedia/commons/f/f8/Macquarie_Logo.svg | Black horizontal wordmark. |
 | `sussex.svg` | University of Sussex | https://commons.wikimedia.org/wiki/File:University_of_Sussex_Logo.svg | https://upload.wikimedia.org/wikipedia/commons/3/34/University_of_Sussex_Logo.svg | Square teal mark, 113.4 × 113.4 viewBox. |
 | `sussex-official.png` | University of Sussex | https://www.sussex.ac.uk/ | https://www.sussex.ac.uk/images/logo.png | Official 234 × 204 PNG; teal US monogram and university text; inspected visually. |
-| `bond.svg` | Bond University | https://bond.edu.au/ | https://bond.edu.au/themes/custom/bond_theme/images/logo-colour.svg | Official SVG, navy; 163 × 63 viewBox. Bond supersedes earlier La Trobe request. |
+| `bond.svg` | Bond University | https://bond.edu.au/ | https://bond.edu.au/themes/custom/bond_theme/images/logo-colour.svg | Official SVG, navy; 163 × 63 viewBox. |
 | `acquire-intelligence.svg` | Acquire Intelligence | https://acquire.ai/ | https://acquire.ai/wp-content/uploads/2025/10/acquirelogo.svg | Official current teal wordmark; 148 × 41 viewBox. |
 
 
