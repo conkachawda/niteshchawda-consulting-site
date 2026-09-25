@@ -1,31 +1,6 @@
 (() => {
   'use strict';
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const film = document.querySelector('[data-welcome-film]');
-  const pause = document.querySelector('[data-pause-film]');
-  if (film && pause) {
-    let userPaused = false;
-    const update = () => {
-      const stopped = motion.matches || userPaused;
-      pause.textContent = stopped ? 'Play motion' : 'Pause motion';
-      pause.setAttribute('aria-pressed', String(stopped));
-      if (stopped) film.pause();
-      else {
-        const source = film.querySelector('source');
-        if (!source.hasAttribute('src')) { source.src = source.dataset.src; film.load(); }
-        film.play().catch(() => { userPaused = true; pause.textContent = 'Play motion'; pause.setAttribute('aria-pressed','true'); });
-      }
-    };
-    pause.addEventListener('click', () => {
-      if (motion.matches && film.paused) {
-        const source = film.querySelector('source');
-        if (!source.hasAttribute('src')) { source.src = source.dataset.src; film.load(); }
-        film.play().then(() => { pause.textContent = 'Pause motion'; pause.setAttribute('aria-pressed','false'); }).catch(() => {});
-      } else { userPaused = !userPaused; update(); }
-    });
-    motion.addEventListener('change', update);
-    update();
-  }
   const counters = document.querySelectorAll('[data-count]');
   const animateCount = el => {
     const total = Number(el.dataset.count), start = performance.now();

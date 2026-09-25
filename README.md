@@ -38,7 +38,7 @@ The site is a personal CV and portfolio. Keep first-person career language, expl
 - Publish only the two authorised academic papers; keep raw CV/transcript extractions out of the repository.
 - The 20+ countries, 45+ clients and +$350M programme uplift figures are the owner’s updated career-wide account. Avoid adding the component examples together, since programme outcomes may overlap.
 - Reference entries are first-person relationship descriptions, not quotations or endorsements.
-- Generated speaking/workshop scenes must retain visible illustration captions. The welcome MP4 is a motion treatment of a still, not recorded speaking footage.
+- The welcome section uses a still image.
 - Logos identify relationships, not endorsements. See `assets/ASSET-SOURCES.md`.
 
 ## Validation and publishing
