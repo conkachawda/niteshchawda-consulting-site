@@ -238,7 +238,7 @@ p.dropcap::first-letter {
   white-space: nowrap;
 }
 .cta-link:hover { background: var(--ink); color: var(--bone); transform: translateY(-1px); box-shadow: var(--shadow-md); }
-.cta-link::after { content: "→"; transition: transform .2s var(--t-ease); }
+.cta-link::after { content: ""; display: inline-block; width: 1em; height: 1em; background: currentColor; clip-path: polygon(0 45%,80% 45%,48% 13%,55% 6%,100% 50%,55% 94%,48% 87%,80% 55%,0 55%); vertical-align: -.12em; flex-shrink: 0; transition: transform .2s var(--t-ease); }
 .cta-link:hover::after { transform: translateX(3px); }
 .cta-link--ink { background: var(--ink); color: var(--bone); border-color: var(--ink); }
 .cta-link--ink:hover { background: var(--brass); border-color: var(--brass); color: var(--ink); }
@@ -669,7 +669,7 @@ section.hero .cta-link.cta-link--brass {
   font-family: var(--mono);
   letter-spacing: 0.06em;
 }
-.card a.more::after { content: "→"; transition: transform .2s var(--t-ease); }
+.card a.more::after { content: ""; display: inline-block; width: 1em; height: 1em; background: currentColor; clip-path: polygon(0 45%,80% 45%,48% 13%,55% 6%,100% 50%,55% 94%,48% 87%,80% 55%,0 55%); vertical-align: -.12em; flex-shrink: 0; transition: transform .2s var(--t-ease); }
 .card a.more:hover::after { transform: translateX(3px); }
 
 /* Featured engagement */
@@ -730,7 +730,7 @@ section.hero .cta-link.cta-link--brass {
 .capabilities .title { font-family: var(--serif); font-size: clamp(1.375rem, 0.5vw + 1rem, 1.875rem); color: var(--ink); font-weight: 600; letter-spacing: -0.01em; }
 .capabilities .desc { color: var(--slate); margin-top: 0.5rem; font-size: 0.9375rem; max-width: 60ch; line-height: 1.55; }
 .capabilities a.more { font-size: .75rem; text-decoration: none; color: var(--aged-brass); white-space: nowrap; font-weight: 500; letter-spacing: 0.14em; font-family: var(--mono); text-transform: uppercase; }
-.capabilities a.more::after { content: " →"; transition: transform .2s var(--t-ease); display: inline-block; }
+.capabilities a.more::after { content: ""; display: inline-block; width: 1em; height: 1em; background: currentColor; clip-path: polygon(0 45%,80% 45%,48% 13%,55% 6%,100% 50%,55% 94%,48% 87%,80% 55%,0 55%); vertical-align: -.12em; flex-shrink: 0; transition: transform .2s var(--t-ease); display: inline-block; }
 .capabilities a.more:hover::after { transform: translateX(3px); }
 @media (max-width: 720px) {
   .capabilities li { grid-template-columns: 40px 1fr; padding: 1.5rem 0; }

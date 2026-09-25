@@ -25,7 +25,7 @@ python -m http.server 8766 --bind 127.0.0.1
 
 Open http://127.0.0.1:8766/. Edit HTML directly. Shared styles and behaviour are in `assets/portfolio.css` and `assets/portfolio.js`. Older assets remain for compatibility but are not loaded by the refreshed pages.
 
-The method supports mouse, touch, arrow keys, Home/End and previous/next controls. Without JavaScript its content appears as a readable sequence. The organisation ribbon has a pause control and respects reduced motion. The profile has print styling.
+The method supports mouse, touch, arrow keys, Home/End and previous/next controls. Without JavaScript its content appears as a readable sequence. The organisation logos use a static responsive grid. The profile has print styling.
 
 ## Editorial boundaries
 
