@@ -1,70 +1,45 @@
-# Reference site — niteshchawda.consulting
+# Nitesh Chawda — personal career portfolio
 
-A complete, deployable static site that demonstrates the McKinsey-inspired editorial design specified in the Brand Book.
+Static, responsive website published through GitHub Pages at https://niteshchawda.consulting/.
 
-## Structure
+## Pages
 
-```
-reference_site/
-├── index.html
-├── about.html
-├── services.html
-├── engagements.html
-├── insights.html
-├── contact.html
-├── privacy.html
-├── terms.html
-├── robots.txt
-├── sitemap.xml
-├── CNAME                              # for GitHub Pages custom domain
-└── assets/
-    ├── styles.css                     # ~330 lines, all design tokens + components
-    ├── main.js                        # ~30 lines, mobile nav + safe external links
-    ├── favicon.svg
-    ├── og-card.svg                    # 1200×630 social share card
-    ├── logo-wordmark-cream-on-navy.svg
-    └── logo-wordmark-navy-on-cream.svg
+- `index.html`: introduction, organisation ribbon, interactive method, career journey and featured work.
+- `about.html`: career story and education.
+- `profile.html`: career history, concurrent appointments and print / save-as-PDF.
+- `services.html`: eight-stage personal method, retaining the legacy URL.
+- `engagements.html`: anonymised professional experience.
+- `insights.html`: education and academic studies.
+- `quantum-commercialisation.html` and `investment-and-performance.html`: academic cases and anonymised PDF downloads.
+- `contact.html`: professional contacts and the existing Formspree endpoint.
+- `admin.html`: the former executive-support URL now presents personal leadership and enablement experience.
+- `privacy.html`, `terms.html`, `credits.html`: site context and sources.
+
+## Development
+
+No framework, package installation or build step is required. Start a local server in this directory:
+
+```sh
+python -m http.server 8766 --bind 127.0.0.1
 ```
 
-## How to use it
+Open http://127.0.0.1:8766/. Edit HTML directly. Shared styles and behaviour are in `assets/portfolio.css` and `assets/portfolio.js`. Older assets remain for compatibility but are not loaded by the refreshed pages.
 
-The reference site exists for two reasons:
+The method supports mouse, touch, arrow keys, Home/End and previous/next controls. Without JavaScript its content appears as a readable sequence. The organisation ribbon has a pause control and respects reduced motion. The profile has print styling.
 
-1. **A live visual reference for Wix.** Open it in a browser; rebuild section-by-section in Wix matching the layout, type and palette. Every component (hero, capability list, engagement card, insight card, footer) is shown.
-2. **A backup deployment path.** If Wix is too slow or limiting, this site is ready to deploy to GitHub Pages or Netlify on the `niteshchawda.consulting` domain. Both are free under the GitHub Student Developer Pack.
+## Editorial boundaries
 
-## Local preview
+The site is a personal CV and portfolio. Keep first-person career language, explicit employment/contract/education relationships and current-employer attribution. Do not reintroduce service packages, staff hiring or consulting sales offers without a change to the brief.
 
-Open `index.html` directly in a browser. For relative path correctness use a tiny local server:
+- McKinsey is contracted engagement leadership.
+- Bond is commerce with law studies; Harvard is an ALM; Sussex follows the official programme title with AI/cybersecurity described as personal focus.
+- The age-17 scholarship is the owner's account, separate from the CV's 2011 programme. Deloitte's age-21 start follows the November 2012 date.
+- Cases withhold company names. Academic proposals and modelled benefits must stay distinct from delivered professional outcomes.
+- Do not upload source PDFs or raw CV/transcript extractions. They contain named subjects and identifiers. Public PDFs are purpose-written anonymised adaptations.
+- Logos identify relationships, not endorsements. See `assets/ASSET-SOURCES.md`.
 
-```powershell
-# Python 3 (already installed):
-cd "C:\Users\nites\OneDrive\Desktop\NCC PTY LTD\03_Website\reference_site"
-python -m http.server 8000
-# then open http://localhost:8000
-```
+## Validation and publishing
 
-## Deploying to GitHub Pages (one-off)
+Check desktop and mobile layouts, all method stages, keyboard controls, navigation, image/PDF links, internal anchors and required form fields. Do not send a test enquiry without the owner's instruction. The existing Formspree action is retained; delivery needs an authorised real submission.
 
-1. Create a new private repo on GitHub: `niteshchawda-consulting-site` (Student Pack gives unlimited private repos already).
-2. Push the contents of this folder to `main`.
-3. In repo settings → Pages, set source to `main / root`. Pages will publish at `niteshchawda-consulting-site.github.io` first, then attach the custom domain via the `CNAME` file in this folder.
-4. Add the DNS records detailed in `04_Email_and_Domain/DNS_Setup_Guide.md`.
-
-## Form back-end
-
-The contact form points at a Formspree placeholder (`REPLACE_WITH_YOUR_ENDPOINT`). Free tier supports 50 submissions/month and is the lowest-friction option. Replace the action URL once Formspree is set up. Alternatives: Wix Forms (if hosted on Wix), Cloudflare Turnstile + a tiny Worker.
-
-## Accessibility
-
-- Colour contrast WCAG AA throughout (AAA on hero text on Parchment).
-- Keyboard navigable, visible focus states on form fields.
-- `prefers-reduced-motion` respected.
-- Skip link in source order before nav.
-
-## Performance
-
-- No JavaScript frameworks; ~30 lines of vanilla JS, deferred.
-- Two web fonts (Inter, Source Serif 4) preconnected and `display=swap`.
-- All SVG assets inline-scalable, ~5 KB each.
-- Total page weight under 50 KB before fonts.
+Pages publishes the root of `main`; `.nojekyll` keeps the site static. Preserve `CNAME`, the search verification file and canonical domain. Update the sitemap when adding pages. Publish through a branch and pull request, then verify the live domain.
