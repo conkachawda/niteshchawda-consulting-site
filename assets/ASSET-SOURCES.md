@@ -38,3 +38,5 @@ Workshop and university speaking assets were generated using the owner’s suppl
 The two academic PDFs under `papers/` are byte-identical copies authorised by their author for publication. WebP page images are renders for the embedded reader.
 
 The map uses public-domain Natural Earth geometry; see `maps/CREDITS.md` for provenance.
+
+Portrait refinement, 25 September 2026: the generated workshop and lectern scenes were edited against three new owner-supplied headshots for closer facial likeness, natural eyes and subtly fitted tailoring. The lectern suit includes a slim blue tie. Generated-scene labels are retained; raw headshots are not published.
