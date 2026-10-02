@@ -1,0 +1,2 @@
+# Preserve the upstream license bytes recorded in font provenance.
+assets/fonts/*-OFL.txt -text
