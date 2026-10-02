@@ -23,7 +23,9 @@ No framework, package installation or build step is required. Start a local serv
 python -m http.server 8766 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:8766/. Edit HTML directly. Shared styles and behaviour are in `assets/portfolio.css` and `assets/portfolio.js`. Older assets remain for compatibility but are not loaded by the refreshed pages.
+Open http://127.0.0.1:8766/. Edit HTML directly. Shared styles and behaviour are in `assets/portfolio.css` and `assets/portfolio.js`. Pages load generated `.min.css` / `.min.js` assets; regenerate after source edits with `powershell -File scripts/minify-assets.ps1` (Node.js/npm and pinned esbuild 0.25.10). No repository package installation is needed; npx caches the official tool outside the repository. Bump the HTML asset query version when publishing changed assets. Older assets remain for compatibility but are not loaded by the refreshed pages.
+
+Google Fonts is linked directly in each page head rather than imported by the shared CSS, retaining the same families, weights and `display=swap`. `llms.txt` is an optional factual reading guide, not a ranking or crawler-access guarantee.
 
 The method supports mouse, touch, arrow keys, Home/End and previous/next controls. Without JavaScript its content appears as a readable sequence. The organisation logos use a static responsive grid. The profile has print styling.
 
