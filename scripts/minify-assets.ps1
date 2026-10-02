@@ -5,6 +5,7 @@ $siteRoot = Split-Path -Parent $PSScriptRoot
 Push-Location -LiteralPath $siteRoot
 try {
     $sources = @(
+        'assets/fonts.css',
         'assets/portfolio.css', 'assets/enhancements.css',
         'assets/roadmap.css', 'assets/global-map.css',
         'assets/portfolio.js', 'assets/enhancements.js',
